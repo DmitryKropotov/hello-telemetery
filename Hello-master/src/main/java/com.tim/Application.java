@@ -13,6 +13,7 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        Configuration.setUpSystemVariables();
         OpenTelemetryConfiguration.newBuilder().setServiceName("http://localhost/0:0:0:0:0:0:0:1:4317").
         setAccessToken("vm7F7Xe69hDdCUOjV3CXVN4CFyksXuRAZ5sznBqllSVAyyWmQsIT8rxqkUN+IBJIzh/e9GyYHmMCyDaNkrwsFLezRZoU5f80S8DtgAZ9").
         buildOpenTelemetry();
